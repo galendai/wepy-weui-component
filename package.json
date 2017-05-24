@@ -10,9 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "wepy": "^1.5.1",
+    "wepy": "^1.5.5",
     "wepy-async-function": "^1.4.4",
-    "wepy-com-toast": "^1.0.1"
+    "wepy-com-toast": "^1.0.1",
+    "wepy-web": "0.0.10"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
