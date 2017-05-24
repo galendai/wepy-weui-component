@@ -121,6 +121,12 @@
                     name: '搜索相关',
                     open: false,
                     pages: ['searchbar']
+                },
+                {
+                    id: 'customize',
+                    name: '自定义组件',
+                    open: false,
+                    pages: ['timeline']
                 }
             ]
         };

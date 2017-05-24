@@ -1,0 +1,52 @@
+<template>
+    <view class="page">
+        <view class="page__hd">
+            <view class="page__title">Steps</view>
+            <view class="page__desc">步骤</view>
+        </view>
+        <view class="page__bd page__bd_spacing">
+            <timeline :nodes.sync="nodes">
+            </timeline>
+        </view>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy';
+    import Timeline from '../components/timeline';
+    export default class Steps extends wepy.page {
+        components = {
+            timeline: Timeline,
+        }
+        data = {
+            nodes: [{}],
+        }
+        methods = {}
+        onShow() {
+            this.nodes = [{
+                    text: '2015.01.01',
+                    desc: 'First release',
+                    current: false,
+                    done: true
+                },
+                {
+                    text: '2016.01.01',
+                    desc: '二零一六年一月一日',
+                    current: true,
+                    done: true
+                },
+                {
+                    text: '2017.01.01',
+                    desc: '定良整莫供遗往节勒？格跳中论需念妇批叶。',
+                    current: false,
+                    done: false
+                }
+            ];
+            this.$apply();
+        }
+    }
+</script>
+
+<style lang="less">
+
+</style>
