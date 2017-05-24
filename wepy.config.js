@@ -2,6 +2,7 @@ const path = require('path');
 let prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
+<<<<<<< HEAD
     eslint: false,
     wpyExt: '.wpy',
     build: {
@@ -10,6 +11,22 @@ module.exports = {
             htmlOutput: path.join('web', 'index.html'),
             jsOutput: path.join('web', 'index.js')
         }
+=======
+  eslint: true,
+  wpyExt: ".wpy",
+  build: {
+    web: {
+      apis: ['showToast', 'showActionSheet', 'showModal'],
+      components: ['navigator', 'button', 'icon', 'progress', 'slider'],
+      htmlTemplate: path.join('src', 'index.template.html'),
+      htmlOutput: path.join('web', 'index.html'),
+      jsOutput: path.join('web', 'index.js')
+    }
+  },
+  compilers: {
+    sass: {
+      outputStyle: "compressed"
+>>>>>>> upstream/master
     },
     compilers: {
         sass: {
