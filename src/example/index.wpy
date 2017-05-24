@@ -126,7 +126,7 @@
                     id: 'customize',
                     name: '自定义组件',
                     open: false,
-                    pages: ['timeline']
+                    pages: ['timeline', 'masker']
                 }
             ]
         };
@@ -137,4 +137,5 @@
             }
         };
     }
+
 </script>

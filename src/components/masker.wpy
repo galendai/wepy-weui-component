@@ -1,0 +1,59 @@
+<template>
+    <view class="vux-masker-box">
+        <slot></slot>
+        <view class="vux-masker" style="{{style}}">
+            <slot name="content"></slot>
+        </view>
+    </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+
+export default class Masker extends wepy.component {
+    props = {
+        color: {
+            type: String,
+            default: '0, 0, 0',
+        },
+        opacity: {
+            type: Number,
+            default: 0.5,
+        }
+    }
+
+    computed = {
+        style() {
+            let color = /,/.test(this.color) ? this.color : toRGB(this.color.replace('#', '')).join(',');
+            console.log(`rgba(${this.color}, ${this.opacity})`);
+            return `
+                background-color: rgba(${this.color}, ${this.opacity})`;
+        }
+    }
+
+    // convert hex color to RGB color
+    toRGB (color) {
+        let num = parseInt(color, 16);
+        console.log('@num: ', num);
+        return [num >> 16, num >> 8 & 255, num & 255];
+    }
+}
+</script>
+
+<style lang="less">
+.vux-masker-box {
+  position: relative;
+}
+.vux-masker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: inherit;
+}
+.vux-masker-fullscreen {
+  position: fixed;
+  z-index: 10001;
+}
+</style>

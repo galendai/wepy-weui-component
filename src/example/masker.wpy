@@ -1,0 +1,74 @@
+<template>
+    <view class="page">
+        <view class="page__hd">
+            <view class="page__title">Masker</view>
+            <view class="page__desc">带Masker的图片</view>
+        </view>
+        <view class="page__bd page__bd_spacing">
+            <featureArticle style="border-radius: 2px;">
+                <view class="m-img" style="background-image: url('{{cover}}')"></view>
+                <view slot="content" class="m-title">
+                    {{title}}
+                    <view class="m-time">
+                    {{pubDate}}
+                </view>
+                </view>
+            </featureArticle>
+        </view>
+    </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+import Masker from '../components/masker';
+
+export default class PictureMasker extends wepy.page {
+
+    components = {
+        featureArticle: Masker,
+    }
+    data = {
+        cover: 'https://cdn.xiaotaojiang.com/uploads/82/1572ec37969ee263735262dc017975/_.jpg',
+        title: '变好导每纪座把今担六终妙？阳怀默几围算！',
+        pubDate: '2017-09-01',
+    }
+
+    onShow() {
+
+    }
+}
+</script>
+
+<style lang="less">
+.m-img {
+  padding-bottom: 33%;
+  display: block;
+  position: relative;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.m-title {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+  font-weight: 500;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.m-time {
+  font-size: 12px;
+  padding-top: 4px;
+  border-top: 1px solid #f0f0f0;
+  display: inline-block;
+  margin-top: 15px;
+}
+</style>
