@@ -126,7 +126,7 @@
                     id: 'customize',
                     name: '自定义组件',
                     open: false,
-                    pages: ['timeline', 'masker']
+                    pages: ['divider', 'masker', 'timeline']
                 }
             ]
         };

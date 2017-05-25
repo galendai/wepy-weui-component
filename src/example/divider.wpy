@@ -1,0 +1,31 @@
+<template>
+    <view class="page">
+        <view class="page__hd">
+            <view class="page__title">Divider</view>
+            <view class="page__desc">分割线示例</view>
+        </view>
+        <view class="page__bd page__bd_spacing">
+            <divider>{{caption}}</divider>
+        </view>
+    </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+import Divider from '../components/divider';
+
+export default class DividerExample extends wepy.page {
+    components = {
+        divider: Divider
+    }
+
+    data = {
+        caption: '',
+    }
+
+    onShow() {
+        this.caption = '我是一条分割线';
+        this.$apply();
+    }
+}
+</script>

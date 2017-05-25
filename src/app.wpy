@@ -67,6 +67,7 @@
                 'example/searchbar',
                 'example/timeline',
                 'example/masker',
+                'example/divider',
             ],
             'window': {
                 'navigationBarTextStyle': 'black',
