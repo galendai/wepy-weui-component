@@ -91,7 +91,7 @@
                         <input class="weui-input" placeholder="请输入验证码" />
                     </view>
                     <view class="weui-cell__ft">
-                        <image class="weui-vcode-img" src="../images/vcode.jpg" style="width: 108px"></image>
+                        <image class="weui-vcode-img" src="../images/vcode.png" style="width: 108px"></image>
                     </view>
                 </view>
             </view>
@@ -198,18 +198,18 @@
 <script>
     import wepy from 'wepy';
 
-    export default class Button extends wepy.page {
+    export default class Input extends wepy.page {
 
         data = {
             tipsFlag: false,
 
             radioItems: [
-                {name: 'cell standard', value: '0'},
+                {name: 'cell standard', value: '0', checked: false},
                 {name: 'cell standard', value: '1', checked: true}
             ],
             checkboxItems: [
                 {name: 'standard is dealt for u.', value: '0', checked: true},
-                {name: 'standard is dealicient for u.', value: '1'}
+                {name: 'standard is dealicient for u.', value: '1', checked: false}
             ],
 
             date: '2016-09-01',
